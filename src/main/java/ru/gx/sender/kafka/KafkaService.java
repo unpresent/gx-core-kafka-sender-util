@@ -1,6 +1,5 @@
 package ru.gx.sender.kafka;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.producer.KafkaProducer;
@@ -15,7 +14,6 @@ import org.jetbrains.annotations.Nullable;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import ru.gx.core.channels.SerializeMode;
-import ru.gx.core.messaging.Message;
 import ru.gx.core.utils.StringUtils;
 import ru.gx.sender.dto.SendMessageResult;
 
