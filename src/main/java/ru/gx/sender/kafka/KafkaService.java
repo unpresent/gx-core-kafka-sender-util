@@ -1,6 +1,5 @@
 package ru.gx.sender.kafka;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.Producer;
@@ -28,16 +27,11 @@ public class KafkaService {
     @NotNull
     private final String defaultKafkaServer;
 
-    @NotNull
-    private final ObjectMapper objectMapper;
-
     public KafkaService(
-            @NotNull @Value("${service.kafka.server}") final String defaultKafkaServer,
-            @NotNull final ObjectMapper objectMapper
+            @NotNull @Value("${service.kafka.server}") final String defaultKafkaServer
     ) {
         super();
         this.defaultKafkaServer = defaultKafkaServer;
-        this.objectMapper = objectMapper;
     }
 
     // <Server, <Topic, Producer>>
